@@ -128,7 +128,7 @@ Check existing databases and create a new one.
 
 ```sql
 SHOW DATABASES;
-CREATE DATABASE student_db;
+CREATE DATABASE student_demo;
 ```
 
 Select the database and confirm the current db.
@@ -185,11 +185,20 @@ pip install mysql-connector-python python-dotenv
 touch .env
 ```
 
+
+
+To check all the credentials information.
+
+```
+mysql -u demo -p -e "SELECT @@port AS DB_PORT, SUBSTRING_
+INDEX(USER(), '@', 1) AS DB_USER; SHOW DATABASES;"
+```
+
 Store the credentials inside the `backend/.env`.
 
 ```
-DB_HOST=<Database Host>
-DB_PORT=<Database Port>
+DB_HOST=127.0.0.1
+DB_PORT=3306
 DB_USER=<Database User>
 DB_PASSWORD=<Database Password>
 DB_NAME=<Database Name>
@@ -238,7 +247,7 @@ curl -X DELETE http://127.0.0.1:5001/api/students/2
 Confirm the DB changed:
 
 ```bash
-mysql -u root -e "SELECT * FROM student_db.students;"
+mysql -u demo -e "SELECT * FROM student_demo.students;"
 ```
 
 ## Step 6 - Connect React ↔ Flask
