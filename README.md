@@ -4,6 +4,8 @@
 
 **Date: 10/15/2026**
 
+**Slides for the Demo**: [DBMS_Demo_Slides_Fall26.pdf](./DBMS_Demo_Slides_Fall26.pdf).
+
 This repository contains the step-by-step workflow of a minimal app to demo connecting a database to an application and running CRUD operations on a `students` table (`studentID`, `name`, `major`, `gpa`).
 
 ## Tech Stack
