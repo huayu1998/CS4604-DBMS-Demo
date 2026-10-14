@@ -106,6 +106,12 @@ Create a database with the username `demo`.
 mysql -u root -p -e "CREATE USER 'demo'@'localhost';"
 ```
 
+Check all the users and hosts on the MySQL server.
+
+```bash
+mysql -u root -e "SELECT user, host FROM mysql.user;"
+```
+
 Launches the MySQL database connecting as the user `demo`.
 
 ```bash
