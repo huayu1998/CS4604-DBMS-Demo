@@ -185,8 +185,6 @@ pip install mysql-connector-python python-dotenv
 touch .env
 ```
 
-
-
 To check all the credentials information.
 
 ```
@@ -265,7 +263,7 @@ cd frontend && npm run dev
 Execute: add, edit and delete a student at [http://localhost:5173/](http://localhost:5173/), then verify:
 
 ```bash
-mysql -u root -e "SELECT * FROM student_db.students;"
+mysql -u demo -e "SELECT * FROM student_demo.students;"
 ```
 
 ## Step 7 - phpMyAdmin setup
@@ -289,12 +287,12 @@ docker run -d --name phpmyadmin -p 8080:80 \
   phpmyadmin:latest
 ```
 
-Open [http://localhost:8080](http://localhost:8080) and log in as `root` with the MySQL root password.
+Open [http://localhost:8080](http://localhost:8080) and log in as `demo` user with the MySQL demo user password (if any).
 
-- phpMyAdmin rejects an empty password. If `root` has none, set one and update `DB_PASSWORD` in `backend/.env`:
+- If the phpMyAdmin rejects an empty password and the `demo` user has none, set one and update `DB_PASSWORD` in `backend/.env`:
 
   ```bash
-  mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '<new_password>';"
+  mysql -u root -e "ALTER USER 'demo'@'localhost' IDENTIFIED BY '<new_password>';"
   ```
 - Manage the container:
 
