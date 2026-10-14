@@ -100,10 +100,16 @@ brew services start mysql
 mysql --version
 ```
 
-Launches the MySQL, connecting as the user `root`.
+Create a database with the username `demo`.
 
 ```bash
-mysql -u root
+mysql -u root -p -e "CREATE USER 'demo'@'localhost';"
+```
+
+Launches the MySQL database connecting as the user `demo`.
+
+```bash
+mysql -u demo -p
 ```
 
 ## Step 4 - Create the DB and run CRUD
