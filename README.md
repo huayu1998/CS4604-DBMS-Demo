@@ -100,10 +100,10 @@ brew services start mysql
 mysql --version
 ```
 
-Create a database with the username `demo`.
+Create a database with the username `demo`and grant it the access to create database.
 
 ```bash
-mysql -u root -p -e "CREATE USER 'demo'@'localhost';"
+mysql -u root -p -e "CREATE USER 'demo'@'localhost'; GRANT ALL PRIVILEGES ON *.* TO 'demo'@'localhost';"
 ```
 
 Check all the users and hosts on the MySQL server.
