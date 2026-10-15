@@ -192,8 +192,7 @@ touch .env
 To check all the credentials information.
 
 ```
-mysql -u demo -p -e "SELECT @@port AS DB_PORT, SUBSTRING_
-INDEX(USER(), '@', 1) AS DB_USER; SHOW DATABASES;"
+mysql -u demo -p -e "SELECT @@port AS DB_PORT, SUBSTRING_INDEX(USER(), '@', 1) AS DB_USER; SHOW DATABASES;"
 ```
 
 Store the credentials inside the `backend/.env`.
