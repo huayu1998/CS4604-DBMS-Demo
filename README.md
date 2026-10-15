@@ -43,6 +43,7 @@ node -v && python3 --version
 ```
 
 **Windows OS**: winget install OpenJS.NodeJS && winget install Python.Python.3.12
+
 **Linux OS**: sudo apt install nodejs npm && sudo apt install python3 python3-pip python3-venv
 
 Create the project folder.
