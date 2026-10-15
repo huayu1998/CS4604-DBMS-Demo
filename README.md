@@ -70,6 +70,8 @@ pip install flask flask-cors
 
 Create `backend/app.py` with a `/` route and a `/api/students` route, then run and test it.
 
+Update the`backend/app.py`with the source code inside the [flask_init.py](./backend/flask_init.py).
+
 ```bash
 touch app.py
 python app.py
@@ -214,7 +216,7 @@ venv/
 
 ### 5.2 Update `app.py` and test each endpoint
 
-Update `backend/app.py` with the DB-backed version (CRUD endpoints), then run it.
+Update `backend/app.py` with the DB-backed version (CRUD endpoints), with the source code inside the [app_final.py](./backend/app_final.py), then run it.
 
 | CRUD   | HTTP   | Endpoint               |
 | ------ | ------ | ---------------------- |
@@ -253,7 +255,7 @@ mysql -u demo -e "SELECT * FROM student_demo.students;"
 
 ## Step 6 - Connect React ↔ Flask
 
-Update `frontend/src/App.jsx` so React calls the Flask API with `fetch()` (Read, Create, Update, Delete), then run both servers in two terminals.
+Update `frontend/src/App.jsx` (with the source code inside the [frontend/src/App.jsx](./frontend/src/App.jsx)) so React calls the Flask API with `fetch()` (Read, Create, Update, Delete), then run both servers in two terminals.
 
 ```bash
 # Terminal 1: backend
