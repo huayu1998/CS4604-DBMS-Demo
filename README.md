@@ -138,7 +138,7 @@ CREATE DATABASE student_demo;
 Select the database and confirm the current db.
 
 ```sql
-USE student_db;
+USE student_demo;
 SELECT DATABASE();
 ```
 
